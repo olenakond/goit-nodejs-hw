@@ -12,6 +12,13 @@ const addSchema = Joi.object({
     .messages({ "any.required": "missing required name field" }),
 });
 
+const addFavoriteSchema = Joi.object({
+  favorite: Joi.boolean()
+    .required()
+    .messages({ "any.required": "missing required name field" }),
+});
+
 module.exports = {
   addSchema,
+  addFavoriteSchema,
 };

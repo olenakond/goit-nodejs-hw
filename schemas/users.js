@@ -16,7 +16,14 @@ const subscriptionSchema = Joi.object({
     .messages({ "any.required": "missing required name field" }),
 });
 
+const emailSchema = Joi.object({
+  email: Joi.string()
+    .required()
+    .messages({ "any.required": "missing required name field" }),
+});
+
 module.exports = {
   userSchema,
   subscriptionSchema,
+  emailSchema,
 };
